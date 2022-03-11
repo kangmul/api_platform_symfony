@@ -29,7 +29,8 @@
         "symfony/serializer": "5.4.*",
         "symfony/twig-bundle": "5.4.*",
         "symfony/validator": "5.4.*",
-        "symfony/yaml": "5.4.*"
+        "symfony/yaml": "5.4.*",
+        "webonyx/graphql-php": "^14.11"
     },
     "config": {
         "allow-plugins": {
@@ -78,5 +79,8 @@
             "allow-contrib": false,
             "require": "5.4.*"
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.38"
     }
 }
