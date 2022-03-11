@@ -1,0 +1,49 @@
+Installasi Api Platform 
+    - composer create-project symfony/skeleton project_name
+    - cd project_name
+    - composer require api 
+
+Database Setup MySql 
+    - buka file .env
+    - DATABASE_URL="mysql://username:password@ip_localhost:3306/database_name?serverVersion=5.7&charset=utf8mb4"
+    - create database di terminal (command prompt)
+        php bin/console doctrine:database:create
+
+Jalankan server Api Platformnya
+    - php -S localhost:8080 -t public
+
+Dengan menggunakan Symfony binary. download symfony.exe di symfony
+
+Generate Entity jika tabel dalam database suda ada dengan perintah 
+    - 
+
+Generate Setter and Getter
+// generates getter/setter methods for all Entities
+php bin/console make:entity --regenerate App
+
+// generates getter/setter methods for one specific Entity
+php bin/console make:entity --regenerate App\Entity\Country
+php bin/console make:entity --regenerate src\Entity\DocumentType
+
+menggunakan /** */ di dalam kodingan
+/**
+ * Formatnya JSON tidak bisa dengan ARRAY
+ * @ApiResource()
+ */
+
+/**
+ * Formatnya JSON tidak bisa dengan ARRAY
+ * @ApiFilter()
+ */
+
+
+cek konfigurasi
+php bin/console debug:config api_platform
+
+penambahan pagination per page dapat disetting di api_platform.yml
+
+apa itu hydra
+
+penggunaan response menggunakan Header :
+    - Accept:Application/json
+    - Accept:Application/ld+json
